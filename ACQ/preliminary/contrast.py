@@ -192,9 +192,9 @@ if __name__ == '__main__':
             plt.bar(17, 1.1*contrast_statistic_min[layer][0]-0, bottom=0,
                     alpha=r_alpha, color='r')
             plt.text(
-                16+bias_, 0.9*contrast_statistic_max[layer][0]+p_bias, '{}'.format(round(100*0.9*contrast_statistic_max[layer][0], 2)), fontsize=text)
+                bias_, contrast_statistic_max[layer][0]+p_bias, '{}'.format(round(100*0.9*contrast_statistic_max[layer][0], 2)), fontsize=text)
             plt.text(
-                16+bias, 1.1*contrast_statistic_min[layer][0]-n_bias, '{}'.format(round(100*1.1*contrast_statistic_min[layer][0], 2)), fontsize=text)
+                bias, contrast_statistic_min[layer][0]-n_bias, '{}'.format(round(100*1.1*contrast_statistic_min[layer][0], 2)), fontsize=text)
 
             plt.bar(18, 1.5*contrast_statistic_max[layer][0]-0,
                     bottom=0, alpha=b_alpha, color='b')
@@ -202,9 +202,9 @@ if __name__ == '__main__':
             plt.bar(18, 0.8*contrast_statistic_min[layer][0]-0, bottom=0,
                     alpha=r_alpha, color='r')
             plt.text(
-                17+bias_, 1.5*contrast_statistic_max[layer][0]+p_bias, '{}'.format(round(100*1.5*contrast_statistic_max[layer][0], 2)), fontsize=text)
+                bias_, contrast_statistic_max[layer][0]+p_bias, '{}'.format(round(100*contrast_statistic_max[layer][0], 2)), fontsize=text)
             plt.text(
-                17+bias, 0.8*contrast_statistic_min[layer][0]-n_bias, '{}'.format(round(100*0.8*contrast_statistic_min[layer][0], 2)), fontsize=text)
+                bias, contrast_statistic_min[layer][0]-n_bias, '{}'.format(round(100*contrast_statistic_min[layer][0], 2)), fontsize=text)
             plt.yticks([1.0, 0.8, 0.6, 0.4, 0.2, 0.0, -0.2, -0.4, -0.6, -0.8, -1.0],
                        ['100%', '80%', '60%', '40%', '20%', '0%', '-20%', '-40%', '-60%', '-80%', '-100%'], fontsize=fontsize)
             plt.xticks([i for i in range(1, 19)], ['{}'.format(i)
